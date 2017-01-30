@@ -5,11 +5,31 @@
 	<title>
 		Hangman
 	</title>
-	<script type="text/javascript" src="js/dictionary.js"></script>
-	<script type="text/javascript" src="js/hangman.js"></script>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
-<body>
-<h1>hangman game</h1>
+<body onload="gameStart()">
+	<!--1) Save your whole game and its properties in an object.
+		2) Save any of your game's functions as methods, and call them underneath your object declaration using event listeners.
+		3) Don't forget to place your global variables and functions above your object.
+		4) Remember: global variables, then objects, then calls.
+		5) Definitely talk with a TA or your instructor if you get tripped up during this challenge. -->
+<h1>Hangman game!</h1>
+<br>
+<h2> Press any key to get started!</h2>
+
+<h2><span id="wins"></span> Wins</h2>
+
+<h2>Current Word</h2><br>
+	<p id="answerWord"></p>
+<br>
+<h2><span id="guessedWord"></span> # of guesses remaining</h2>
+
+<h2>Letters alread guessed</h2>
+<p id="guessedLetters"></p>
+
 	
 </body>
 </html>
