@@ -10,7 +10,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
-<body onload="game.loadGame()">
+<body onload="loadGame()">
 <!-- <body> -->
 	<!--1) Save your whole game and its properties in an object.
 		2) Save any of your game's functions as methods, and call them underneath your object declaration using event listeners.
@@ -21,17 +21,15 @@
 <br>
 <h2> Press any key to get started!</h2>
 
-<h2><span id="wins"></span> Wins</h2>
+<h2><span id="wins"> </span> </h2>
 
 <h2>Current Word</h2><br>
 	<p id="answerWord"></p>
 <br>
-<h2><span id="guessedWord"></span> # of guesses remaining</h2>
+<div id="remGuess"></div>
 
-<h2>Letters alread guessed</h2>
-<div id="gameEvent">
 
-</div>
+<div id="inChar"></div>
 
 	
 </body>

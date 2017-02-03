@@ -32,28 +32,24 @@ document.onkeyup = function(event) {
 
 	if (userGuess.match(/^[a-z]$/i)) {
 
+		var remainingLetters = currentWord.length;
+
 		for (var i = 0; i < currentWord.length; i++){
 			if (currentWord[i] === userGuess) {
 				answerArr[i] = userGuess;
 				// wins++; // try to only increment win if user mataches currentWord array
 				console.log(answerArr[i]);
-				// document.getElementById("answerWord").innerHTML = answerArr.join(" ");
+				document.getElementById("answerWord").innerHTML = answerArr.join(" ");
 			} else if ((currentWord.length -1) > i ) {
 				console.log("works");
-
 			} else {
 				guessLimit--;
-				// charGuessed = [];
-				charGuessed.push(userGuess);
-				// document.getElementById("inChar").innerHTML = "<h2>Letters guessed so far</h2>" + "<br>" + "<p>" + charGuessed.join(" ") + "</p>";
 				document.getElementById("remGuess").innerHTML = guessLimit + " Guesses remaining";
 			}
-			document.getElementById("answerWord").innerHTML = answerArr.join(" ");
+			
 			document.getElementById("wins").innerHTML = wins + "Wins";
-			document.getElementById("inChar").innerHTML = "<h2>Letters guessed so far</h2>" + "<br>" + "<p>" + charGuessed.join(" ") + "</p>";
-			// charGuessed.push(userGuess);
 		} 
-	
+	charGuessed.push(userGuess);
 	// document.getElementById("remGuess").innerHTML = guessLimit + " Guesses remaining";
 	document.getElementById("inChar").innerHTML = "<h2>Letters guessed so far</h2>" + "<br>" + "<p>" + charGuessed.join(" ") + "</p>";
 	
